@@ -23,6 +23,8 @@ app.post('/send-message', function (req, res) {
 
     if (message && channel)
         channel.send(message)
+
+    res.redirect('/')
 })
 
 app.listen(port, () => {
