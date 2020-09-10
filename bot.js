@@ -4,6 +4,7 @@ require('dotenv').config()
 
 const express = require('express')
 const app = express()
+const basicAuth = require('express-basic-auth')
 
 const channelId = '523879507258507264'
 const port = 4683
@@ -11,6 +12,11 @@ const port = 4683
 app.use(express.static('public'))
 app.use(express.urlencoded({
     extended: true
+}))
+app.use(basicAuth({
+    users: {
+        'meneksefamily': 'sertacabimbe'
+    }
 }))
 
 app.get('/', function (req, res) {
