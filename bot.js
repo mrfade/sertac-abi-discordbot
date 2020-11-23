@@ -6,7 +6,7 @@ const express = require('express')
 const app = express()
 const basicAuth = require('express-basic-auth')
 
-const channelId = '523879507258507264'
+const channelId = '780104162209300530'
 const port = 4683
 
 app.use(express.static('public'))
